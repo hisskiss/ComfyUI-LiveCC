@@ -110,20 +110,25 @@ class LiveCC:
 
         infer = LiveCCDemoInfer(model_path=model)
         state = {'video_path': video}
+                      
         commentaries = []
-
+        
+        t = 0
         for t in range(31):
             state['video_timestamp'] = t
             for (start_t, stop_t), response, state in infer.live_cc(
-                message=text, state=state,
-                max_pixels=max_pixels,
-                repetition_penalty=repetition_penalty,
-                streaming_eos_base_threshold=streaming_eos_base_threshold,
+                message=text, state=state, 
+                max_pixels=max_pixels, repetition_penalty=repetition_penalty, 
+                streaming_eos_base_threshold=streaming_eos_base_threshold, 
                 streaming_eos_threshold_step=streaming_eos_threshold_step
             ):
+                print(f'{start_t}s-{stop_t}s: {response}')
                 commentaries.append([start_t, stop_t, response])
+                
             if state.get('video_end', False):
                 break
+            
+            t += 1
 
         return (commentaries,)
 
