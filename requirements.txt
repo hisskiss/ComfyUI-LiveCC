@@ -16,7 +16,8 @@ gdown
 gpustat 
 timm 
 sentencepiece 
-openai av==12.0.0 
+openai 
+av==12.0.0 
 python_speech_features 
 scipy 
 wavfile 
