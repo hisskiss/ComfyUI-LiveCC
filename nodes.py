@@ -1,4 +1,4 @@
-from demo.infer import LiveCCDemoInfer
+from .src.infer import LiveCCDemoInfer
 
 
 class LoadLiveCCVideo:
