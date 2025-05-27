@@ -1,9 +1,9 @@
-from .nodes import LoadLiveCCVideo, LoadLiveCCModel, Prompt, LiveCC, SaveLiveCCText
+from .nodes import LoadLiveCCVideo, LoadLiveCCModel, LiveCCPrompt, LiveCC, SaveLiveCCText
 
 NODE_CLASS_MAPPINGS = {
     "LoadLiveCCVideo": LoadLiveCCVideo,
     "LoadLiveCCModel": LoadLiveCCModel,
-    "Prompt": Prompt,
+    "LiveCCPrompt": LiveCCPrompt,
     "LiveCC": LiveCC,
     "SaveLiveCCText": SaveLiveCCText,
 }
@@ -11,7 +11,7 @@ NODE_CLASS_MAPPINGS = {
 NODE_DISPLAY_NAME_MAPPINGS = {
     "LoadLiveCCVideo": "Load LiveCC Video",
     "LoadLiveCCModel": "Load LiveCC Model",
-    "Prompt": "Prompt",
+    "LiveCCPrompt": "LiveCC Prompt",
     "LiveCC": "LiveCC",
     "SaveLiveCCText": "Save LiveCC Text",
 } 
