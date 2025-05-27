@@ -45,7 +45,7 @@ class LoadLiveCCModel:
         return (model,)
 
 
-class Prompt:
+class LiveCCPrompt:
     @classmethod
     def INPUT_TYPES(s):
         return {
